@@ -1,0 +1,254 @@
+body {
+  font-family: "Comic Neue", "Patrick Hand", "Caveat", cursive, sans-serif;
+  background-color: rgb(162, 156, 156);
+}
+.insidebody {
+  width: 50%;
+  height: 600px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  margin: auto;
+
+  border: 1px solid white;
+  border-radius: 15px;
+}
+.heading {
+  text-align: center;
+}
+#tasks {
+  width: 500px;
+  height: 40px;
+  margin-left: 110px;
+  padding-left: 30px;
+  font-size: 16px;
+}
+.submitbutton {
+  width: 90px;
+  height: 40px;
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  background-color: white;
+  text-align: center;
+  color: black;
+  font-weight: 700;
+  border-radius: 5px;
+}
+.submitbutton:hover {
+  opacity: 0.8;
+}
+.valuescontainer {
+  width: 500px;
+  height: 300px;
+  border: 1px solid grey;
+  border-radius: 8px;
+  margin: auto;
+  margin-top: 20px;
+}
+.notcompleted {
+  width: 400px;
+}
+.completed {
+  width: 400px;
+  text-decoration: line-through;
+}
+.valuesinsidecontainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.completedinside {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  opacity: 0.4;
+}
+
+.form__group {
+  position: relative;
+  padding: 20px 0 0;
+  width: 100%;
+  max-width: 180px;
+  margin: auto;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #6b6b6b;
+  outline: 0;
+  font-size: 17px;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #ffe699;
+  pointer-events: none;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #ffe699, #5d3294);
+  border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #ffe699;
+  font-weight: 700;
+}
+
+.form__field:required,
+.form__field:invalid {
+  box-shadow: none;
+}
+.valuescontainer {
+  position: relative;
+  padding: 20px;
+  border-radius: 16px;
+  z-index: 1;
+  overflow: hidden;
+  margin-top: 20px;
+  background-color: #111;
+}
+
+.valuescontainer::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00aa,
+    #ff0000
+  );
+  background-size: 300%;
+  border-radius: 18px;
+  z-index: -2;
+  animation: rotateBorder 6s linear infinite;
+}
+
+.valuescontainer::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  background-color: #111;
+  border-radius: 14px;
+  z-index: -1;
+}
+
+@keyframes rotateBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.footercard {
+  position: relative;
+  width: 50%;
+  height: 60px;
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 1;
+  color: white;
+  padding: 10px;
+  box-shadow: 0 0 10px #000;
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+  color: white;
+  font-family: "Edu NSW ACT Hand Pre", cursive;
+  transform: scale(0.95);
+  animation: fadeScaleIn 1.8s ease-in forwards;
+  transition: 0.9s ease;
+  font-size: 30px;
+}
+.footercard:hover {
+  width: 80%;
+}
+
+.footercard::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: conic-gradient(from 0deg, #00f, #0ff, #0f0, #ff0, #f00, #00f);
+  z-index: -1;
+  animation: rotate 4s linear infinite;
+  border-radius: 14px;
+}
+
+.footercard::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: rgb(0, 0, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  z-index: -1;
+  border-radius: 10px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.footer-text {
+  margin: auto;
+  margin-top: 13px;
+}
