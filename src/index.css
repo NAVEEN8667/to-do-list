@@ -252,3 +252,60 @@ body {
   margin: auto;
   margin-top: 13px;
 }
+@media (max-width: 768px) {
+  .insidebody {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  #tasks {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    font-size: 14px;
+  }
+
+  .submitbutton {
+    width: 100px;
+    font-size: 14px;
+  }
+
+  .valuescontainer,
+  .notcompleted,
+  .completed {
+    width: 90%;
+  }
+
+  .valuesinsidecontainer,
+  .completedinside {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .form__group {
+    max-width: 90%;
+  }
+
+  .form__label {
+    left: 10px;
+  }
+
+  .footercard {
+    width: 90%;
+    font-size: 20px;
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .footercard:hover {
+    width: 95%;
+  }
+
+  .footer-text {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+}
